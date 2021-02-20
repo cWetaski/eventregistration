@@ -13,16 +13,16 @@ public class RegistrationManager
   //RegistrationManager Associations
   
 	
-  private List<Person> participants;
+  private List<Person> persons;
   
   @OneToMany(cascade= {CascadeType.ALL})
-  public List<Person> getParticipants()
+  public List<Person> getPersons()
   {
-    return this.participants;
+    return this.persons;
   }
   
-  public void setParticipants(List<Person> participants) {
-	  this.participants = participants;
+  public void setPersons(List<Person> persons) {
+	  this.persons = persons;
   }
   
   private List<Event> events;
@@ -55,7 +55,7 @@ public class RegistrationManager
 
   public RegistrationManager()
   {
-    participants = new ArrayList<Person>();
+    persons = new ArrayList<Person>();
     events = new ArrayList<Event>();
     registrations = new ArrayList<Registration>();
   }

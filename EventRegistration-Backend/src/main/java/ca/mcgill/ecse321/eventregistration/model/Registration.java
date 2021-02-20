@@ -6,15 +6,15 @@ import javax.persistence.Id;
 
 @Entity
 public class Registration{
-	private Person participant;
+	private Person person;
 	
 	@ManyToOne
 	public Person getPerson() {
-		return this.participant;
+		return this.person;
 	}
 	
-	public void setParticipant(Person aPerson) {
-		this.participant = aPerson;
+	public void setPerson(Person aPerson) {
+		this.person = aPerson;
 	}
 	
 	private Event event;
