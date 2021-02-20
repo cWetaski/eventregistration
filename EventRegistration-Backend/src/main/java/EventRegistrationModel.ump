@@ -1,0 +1,28 @@
+class RegistrationManager{
+}
+class Person
+{
+  String name;
+}
+class Registration
+{
+  Integer id;
+}
+class Event {
+  String name;
+  Date eventDate;
+  Time startTime;
+  Time endTime;
+}
+class RegistrationManager
+{
+}
+
+association {
+  * Person participants -<@> 1 RegistrationManager registrationManager;
+  * Event events -<@> 1 RegistrationManager registrationManager;
+  * Registration registrations -<@> 1 RegistrationManager registrationManager;
+  1 Person participant <- * Registration registration;
+  1 Event <- * Registration registration;
+}
+ 
