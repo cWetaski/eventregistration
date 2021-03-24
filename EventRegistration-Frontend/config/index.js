@@ -5,9 +5,9 @@ module.exports = {
   build: {
     env: require('./prod.env'),
     host: 'eventregistration-backend-weta.herokuapp.com',
-    port: 443,
+    port: 5432,
     backendHost: 'eventregistration-backend-weta.herokuapp.com',
-    backendPort: 443,
+    backendPort: 5432,
     index: path.resolve(__dirname, '../dist/index.html'),
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
