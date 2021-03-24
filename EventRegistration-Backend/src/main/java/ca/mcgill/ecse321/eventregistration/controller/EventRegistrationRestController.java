@@ -118,5 +118,4 @@ public class EventRegistrationRestController {
 		}
 		return events;
 	}
-
 }
