@@ -2,11 +2,16 @@
   <div id="eventregistration">
     <h2>People</h2>
     <table>
-      <tr>
-          <td>John</td>
-          <td>Event to attend</td>
-      </tr>
-      <tr>
+      <tr v-for="person in persons" >
+            <td>{{ person.name }}</td>
+            <td>
+              <ul>
+                <li v-for="event in person.events">
+                  {{event.name}}
+                </li>
+              </ul>
+            </td>
+        </tr>
           <td>
               <input type="text" placeholder="Person Name">
           </td>
@@ -21,7 +26,7 @@
   </div>
 </template>
 
-<script>
+<script src="./registration.js">
 </script>
 
 <style>
@@ -31,3 +36,4 @@
     background: #f2ece8;
   }
 </style>
+
